@@ -1,0 +1,363 @@
+// Imposta il layout del corpo della pagina con Flexbox, colore di sfondo e altezza minima
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+   
+}
+
+// Imposta il layout del contenitore #app con Flexbox e applica uno sfondo con gradiente e immagine
+#app {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/img/backgroundBE.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-position: right top; 
+    background-repeat: no-repeat; 
+    overflow-y:hidden;
+}
+
+// ------------------------ADMIN----------------------------------
+
+// Colore di sfondo per la navbar personalizzata
+.custom-navbar {
+    background-color: #003366;
+}
+// Aggiunge una transizione per il colore e lo sfondo dei link nella navbar
+.navbar-brand,
+.nav-link {
+    // color: white;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+// Rimuove il bordo dal toggler della navbar in admin
+.navbar-toggler {
+    border: none;
+}
+
+// Cambia il colore del link nella navbar al passaggio del mouse
+.navbar-nav .nav-link:hover {
+    color: rgb(121, 177, 236);
+}
+
+// Colore di sfondo per il link attivo nella navbar
+.nav-item .active {
+    background-color: #0056b3;
+    color: #cccccc;
+}
+
+.nav-item .active:hover {
+    color: #b99f9f;
+}
+
+
+// Colore di sfondo e altezza per la sidebar personalizzata
+.custom-sidebar {
+    background-color: #003366;
+    height: 100%;
+    min-height: 100vh;
+}
+
+// Colore e transizione per i link nella sidebar personalizzata
+.custom-sidebar .nav-link {
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ // Colore di sfondo e del testo per i link attivi e al passaggio del mouse nella sidebar
+.custom-sidebar .nav-link.active,
+.custom-sidebar .nav-link:hover {
+    background-color: #0056b3;
+    color: #ffcc00;
+}
+
+// Stili per l'header e il footer, inclusi colori, padding e allineamento del testo
+.header,
+.footer {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+// Imposta il layout del contenitore fluido con Flexbox
+.container-fluid {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+// Imposta il layout delle righe con Flexbox
+.ms-row {
+    flex: 1;
+    display: flex;
+}
+
+// Stili per il contenuto principale, inclusi Flexbox e padding
+.content {
+    flex: 1;
+    padding: 20px 0px 60px 0px;
+}
+
+// Stili per le card, inclusi bordo, ombra, margine e transizioni
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+// Effetti al passaggio del mouse per le card, inclusi trasformazione e ombra
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+// Stili per le immagini nelle card, inclusa la larghezza massima e il bordo inferiore
+.card img {
+    max-width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+// Padding per le sezioni services, team, about e contact
+.services,
+.team,
+.about,
+.contact {
+    padding: 50px 0;
+}
+
+// Stili per le icone nelle sezioni, inclusa dimensione del font, margine inferiore e colore
+.services .icon,
+.team .icon,
+.about .icon,
+.contact .icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+// Stili per i bottoni primari, inclusi colori di sfondo e bordo, e transizioni
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+// Effetti al passaggio del mouse per i bottoni primary, inclusi colori di sfondo e bordo
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #004494;
+}
+
+/* Animazione per il pulsante di logout */
+.animate-logout {
+    transition: transform 0.3s, color 0.3s;
+}
+
+// Effetti al passaggio del mouse per il pulsante di logout, inclusi trasformazione e colore
+.animate-logout:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+/* Animazione per il pulsante per tornare alla pagina iniziale */
+.animate-login-page {
+    color: rgb(255, 255, 255, 0.55);
+    padding: 8.2px 0;
+    text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+// Effetti al passaggio del mouse per il pulsante di logout, inclusi trasformazione e colore
+.animate-login-page:hover {
+    transform: scale(1.1);
+}
+
+// ------------------------ADMIN----------------------------------
+
+/* Classi per il ridimensionamento delle foto del CV e della foto profilo */
+.doctor-photo {
+    width: 250px;
+    height: 300px;
+}
+
+.doctor-cv {
+    width: 217px;
+    height: 200px;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
+//classe custom per il model
+.ms-modal {
+    border-radius: 16px;
+    color: white;
+    background-color: #003366;
+    top: 15%;
+    animation: x-motion 0.5s ease-in;
+}
+
+@keyframes x-motion {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 15%;
+    }
+}
+
+
+//classe custom per il model
+.ms-modal {
+    border-radius: 16px;
+    color: white;
+    background-color: #003366;
+    top: 15%;
+    animation: x-motion 0.4s ease-in;
+}
+
+@keyframes x-motion {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 15%;
+    }
+}
+
+.ms-header {
+    height: 10vh;
+}
+
+.ms-jumbotron {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../public/img/bg-jumbotron.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.ms-card {
+    background-image: linear-gradient(225deg, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+    opacity: 0.8;
+}
+
+// .ms_aspect-ratio {
+//     aspect-ratio: .8;
+// }
+
+.ms-info-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+//testo opacizzato nel welcome
+.ms-text {
+    opacity: 0.8;
+}
+
+.ms-welcome-title {
+    padding-top: 200px;
+}
+
+//margine delle card nel welcome
+.ms-margin-card {
+    // margin-top: 250px;
+    gap: 100px;
+}
+
+//copiato stile bottone di login per la registrazione
+.register-button {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+    color: white;
+    padding-block: 10px; // Padding ridotto
+    margin: 20px auto 10px auto; // Margine inferiore ridotto
+    border-radius: 10px; // Border-radius ridotto
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 10px 5px -5px; // Ridotto per una proporzione migliore
+    border: none;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.03);
+      box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 6px -6px; // Ridotto per una proporzione migliore
+    }
+    
+    &:active {
+      transform: scale(0.95);
+      box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 8px 4px -4px; // Ridotto per una proporzione migliore
+    }
+}
+
+.ms_text-overflow {
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+.table-custom {
+        border-radius: 15px; 
+        overflow: hidden; 
+    }
+
+
+/* Rimuove l'effetto di hover zoom per la card del messaggio */
+.card-message {
+    transition: none; 
+    transform: none; 
+}
+
+.card-message:hover {
+    transform: none; 
+    box-shadow: none;
+}
+
+/* Rimuove l'effetto di hover zoom per la card della recensione */
+.card-review {
+    transition: none; 
+    transform: none; 
+}
+
+.card-review:hover {
+    transform: none; 
+    box-shadow: none; 
+}
+
+.custom-success-message {
+    background-color: rgba(40, 167, 69, 0.8); /* Add transparency to the success message background */
+    border-color: rgba(40, 167, 69, 0.8); /* Add transparency to the border */
+    margin-top: 20px; /* Additional margin to separate from other elements */
+    margin-bottom: 20px; /* Additional margin to separate from other elements */
+}
+
+
+//altezza bottone di chiusura modale
+// .ms-closeModalDelete{
+//     height: 50px;
+// }
+
+// GRADIENT
+$gradient-top: linear-gradient(0deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-right: linear-gradient(90deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-bottom: linear-gradient(180deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-left: linear-gradient(270deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-top-right: linear-gradient(45deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-bottom-right: linear-gradient(135deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-top-left: linear-gradient(225deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-bottom-left: linear-gradient(315deg, #0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+$gradient-radial: radial-gradient(#0a369dff, #4472caff, #5e7ce2ff, #92b4f4ff, #cfdee7ff);
+
